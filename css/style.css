@@ -1,0 +1,57 @@
+body {
+  background-color: #efdcf9;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.city {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px dashed #341948;
+}
+
+.container {
+  max-width: 600px;
+  background: white;
+  padding: 60px;
+  border: 1px solid #341948;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 10px rgba(91, 86, 86, 0.1);
+  margin: 60px auto;
+}
+
+.date {
+  opacity: 70%;
+}
+
+footer {
+  text-align: center;
+  opacity: 70%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 0px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.time {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 24px;
+  vertical-align: middle;
+  line-height: 48px;
+}
