@@ -23,6 +23,18 @@ function barbadosTime() {
 barbadosTime();
 setInterval(barbadosTime, 1000);
 
+function londonTime() {
+  let secondDate = document.querySelector("#london .date");
+  secondDate.innerHTML = moment().tz("Europe/London").format("MMMM Do YYYY");
+
+  let secondTime = document.querySelector("#london .time");
+  secondTime.innerHTML = moment()
+    .tz("Europe/London")
+    .format("hh:mm:ss [<small>]A[</small>]");
+}
+londonTime();
+setInterval(londonTime, 1000);
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
@@ -43,7 +55,7 @@ function updateCity(event) {
           <small> ${cityTime.format("A")} </small>
           </div>
         </div>
-         <a href="index.html">Home Page</a>
+         <a href="index.html">Homepage</a>
         `;
 }
 
