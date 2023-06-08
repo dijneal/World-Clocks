@@ -1,3 +1,12 @@
+a {
+  text-decoration: none;
+  color: #341948;
+}
+
+a:visited {
+  color: #341948;
+}
+
 body {
   background-color: #efdcf9;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -23,6 +32,7 @@ body {
 
 .date {
   opacity: 70%;
+  color: #341948;
 }
 
 footer {
@@ -40,9 +50,14 @@ h2 {
 
 select {
   display: block;
+  color: #341948;
   width: 100%;
   padding: 5px;
   margin: 10px 0;
+}
+
+small {
+  color: #341948;
 }
 
 .time {
