@@ -1,30 +1,34 @@
-function oaklandTime() {
-  let firstDate = document.querySelector("#oakland .date");
+function losangelesTime() {
+  let firstDate = document.querySelector("#losangeles .date");
   firstDate.innerHTML = moment()
     .tz("America / Los_Angeles")
     .format("MMMM Do YYYY");
 
-  let firstTime = document.querySelector("#oakland .time");
+  let firstTime = document.querySelector("#losangeles .time");
   firstTime.innerHTML = moment()
     .tz("America / Los_Angeles")
     .format("hh:mm:ss [<small>]A[</small>]");
 }
-oaklandTime();
-setInterval(oaklandTime, 1000);
-function newYorkTime() {
-  let secondDate = document.querySelector("#new-york .date");
-  secondDate.innerHTML = moment().tz("America/New_York").format("MMMM Do YYYY");
+losangelesTime();
+setInterval(losangelesTime, 1000);
+function barbadosTime() {
+  let secondDate = document.querySelector("#barbados .date");
+  secondDate.innerHTML = moment().tz("America/Barbados").format("MMMM Do YYYY");
 
-  let secondTime = document.querySelector("#new-york .time");
+  let secondTime = document.querySelector("#barbados .time");
   secondTime.innerHTML = moment()
-    .tz("America/New_York")
+    .tz("America/Barbados")
     .format("hh:mm:ss [<small>]A[</small>]");
 }
-newYorkTime();
-setInterval(newYorkTime, 1000);
+barbadosTime();
+setInterval(barbadosTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
 
